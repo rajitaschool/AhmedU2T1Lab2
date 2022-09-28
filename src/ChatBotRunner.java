@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ChatBotRunner {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        ChatBot chatbot1 = new ChatBot("Saul Goodman", 5);
+        ChatBot chatbot1 = new ChatBot("Saul Goodman", 5, "cats");
         chatbot1.greeting("Rajit"); //Calls Method 1
         chatbot1.weather(); //Calls method 2
 
@@ -26,6 +26,12 @@ public class ChatBotRunner {
         System.out.println("Would you believe me if I told you I can do something crazy?"); //Calls Method 5
         System.out.println("The sum of those 3 numbers is.. " + chatbot1.addNumbers(num1Input, num2Input, num3Input) + "!! Crazy isn't it?");
         System.out.println(chatbot1.goodbye()); //Calls Method 6
+        chatbot1.yourLocation(); //Calls Method 7
+        System.out.println("Hey, whats your favorite animal by the way? (Lower case and plural please!)");
+        String userFavoriteAnimal = scan.nextLine();
+        System.out.println(chatbot1.sameFavoriteAnimal(userFavoriteAnimal));
+
+
 
 
 
